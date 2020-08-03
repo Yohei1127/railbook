@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'hello/list'
   get 'record/find'
   get 'record/find_by'
+  get 'record/page(/:id)', to: 'record#page'
+  get 'record/last'
 end
