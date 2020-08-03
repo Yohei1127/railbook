@@ -28,4 +28,8 @@ class RecordController < ApplicationController
   def exists
     flag = Book.where(publish: '技術評論社').exists?
   end
+
+  def scope
+    @books = Book.gihyo.top10
+  end
 end
