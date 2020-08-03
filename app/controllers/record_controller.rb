@@ -24,4 +24,8 @@ class RecordController < ApplicationController
   def groupby
     @books = Book.select('publish, AVG(price) AS avg_price').group(:publish)
   end
+
+  def exists
+    flag = Book.where(publish: '技術評論社').exists?
+  end
 end
