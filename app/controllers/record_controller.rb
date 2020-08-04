@@ -41,4 +41,8 @@ class RecordController < ApplicationController
     cnt = Book.count
     render plain: "#{cnt}件です"
   end
+
+  def average
+    price = Book.where(publish: '技術評論社').average(:price)
+  end
 end
