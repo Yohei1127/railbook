@@ -36,4 +36,9 @@ class RecordController < ApplicationController
   def def_scope
     render plain: Review.all.inspect
   end
+
+  def count
+    cnt = Book.count
+    render plain: "#{cnt}件です"
+  end
 end
